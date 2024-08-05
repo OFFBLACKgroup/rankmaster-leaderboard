@@ -9,7 +9,7 @@ const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY
 const ably = new Ably.Realtime(process.env.ABLY_ADMIN_KEY)
 const leaderboard = ably.channels.get('leaderboard')
 
-app.get("/", (req, res) => res.send("RankMaster Leaderboard Updater"));
+app.get("", (req, res) => res.send("RankMaster Leaderboard Updater"));
 
 supabase
   .channel('public:leaderboard')
