@@ -4,6 +4,7 @@ import 'dotenv/config'
 import { createClient } from 'jsr:@supabase/supabase-js@2'
 
 const app = express()
+app.use(express.json())
 // const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY)
 
 // const ably = new Ably.Realtime(process.env.ABLY_ADMIN_KEY)
