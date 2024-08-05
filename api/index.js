@@ -24,7 +24,7 @@ supabase
   .subscribe()
 
 app.listen(3000, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Example app listening on port ${3000}`)
 })
 
 export default app
