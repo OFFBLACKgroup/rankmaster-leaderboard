@@ -3,8 +3,6 @@ import 'dotenv/config'
 import Ably from 'ably'
 import { createClient } from 'jsr:@supabase/supabase-js@2'
 
-
-const express = require('express')
 const app = express()
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY)
 
@@ -26,3 +24,5 @@ supabase
 app.listen(3000, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
+module.exports = app;
