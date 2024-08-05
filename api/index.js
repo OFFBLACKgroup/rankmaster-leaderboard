@@ -7,6 +7,8 @@ const app = express()
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY)
 
 const client = new Ably.Realtime(process.env.ABLY_ADMIN_KEY)
+await client.connection.once('connected')
+console.log('Connected to Ably')
 const leaderboard = client.channels.get('leaderboard')
 
 app.get("/", (req, res) => res.send("RankMaster Leaderboard Updater"));
